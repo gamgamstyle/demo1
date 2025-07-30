@@ -50,8 +50,8 @@ coverage/
 
 # Vite
 .vite/
-vite.config.ts
-vite.config.js
+#vite.config.ts
+#vite.config.js
 
 # Next.js
 .next/
