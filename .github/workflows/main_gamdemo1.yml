@@ -50,4 +50,4 @@ jobs:
           app-name: 'gamdemo1'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B2D743EE735C4C49BB2A5FA6ACD060F2 }}
-          package: .
+          package: dist
