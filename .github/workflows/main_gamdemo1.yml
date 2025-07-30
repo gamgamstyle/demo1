@@ -21,14 +21,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x'
+          node-version: '20'
 
-      - name: Install dependencies and build Vite app
+      - name: Install dependencies and build
         run: |
-          npm install
+          npm ci
           npm run build
 
-      - name: Upload Vite build output
+      - name: Upload dist/ folder
         uses: actions/upload-artifact@v4
         with:
           name: vite-dist
@@ -39,12 +39,12 @@ jobs:
     needs: build
 
     steps:
-      - name: Download Vite build output
+      - name: Download dist/ folder
         uses: actions/download-artifact@v4
         with:
           name: vite-dist
 
-      - name: Deploy to Azure Web App
+      - name: Deploy dist/ to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'gamdemo1'
