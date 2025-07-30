@@ -1,0 +1,83 @@
+# Created by .ignore support plugin (hsz.mobi) + gam
+
+# Node & Package Manager
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+
+# Environment & Debug
+.env
+.env.backup
+.phpunit.result.cache
+npm-debug.log
+yarn-error.log
+bun.lockb
+pnpm-lock.yaml
+package-lock.json
+
+# Laravel
+Homestead.json
+Homestead.yaml
+
+# macOS
+.DS_Store
+
+# IDEs
+.idea/
+.idea_modules/
+*.iws
+*.lnk
+/*.url
+/*.bat
+/*.log
+.vscode/
+.vscode-test/
+
+# CMake
+cmake-build-debug/
+
+# TypeScript
+*.tsbuildinfo
+
+# Build Tools
+dist/
+coverage/
+*.tmp
+*.cache
+*.bak
+
+# Vite
+.vite/
+vite.config.ts
+vite.config.js
+
+# Next.js
+.next/
+out/
+.vercel/
+
+# Yarn v2+/Corepack
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+.yarnrc.yml
+
+# GAM Files - begin
+/createURLFromGitConfig.py
+/createURLFromGitConfig.bat
+/commitlogs
+*.ffs_batch
+# GAM Files - end
+
+# Plugin-specific
+atlassian-ide-plugin.xml
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
