@@ -28,19 +28,10 @@ jobs:
       - name: Build Vite app
         run: npm run build
 
-      - name: Azure Login
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Clean wwwroot folder on Azure Web App
-        run: |
-          az webapp ssh --name ${{ secrets.AZURE_WEBAPP_NAME }} --resource-group ${{ secrets.AZURE_WEBAPP_RESOURCE_GROUP }} --command "rm -rf /home/site/wwwroot/* /home/site/wwwroot/.*" || true
-
-      - name: Deploy dist folder to Azure Web App
+      - name: Deploy dist/ folder to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
+          app-name: 'gamdemo1'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B2D743EE735C4C49BB2A5FA6ACD060F2 }}
-          package: dist
+          package: ./dist
